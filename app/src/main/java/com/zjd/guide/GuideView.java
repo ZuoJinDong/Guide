@@ -178,18 +178,6 @@ public class GuideView extends View{
         super.onSizeChanged(w, h, oldw, oldh);
     }
 
-    /**
-     * 获取基线中间点
-     * @param paint
-     * @return
-     */
-    public int getBaseLineY(Paint paint){
-        Paint.FontMetrics fontMetrics = paint.getFontMetrics();
-        float top = fontMetrics.top;//为基线到字体上边框的距离,即上图中的top
-        float bottom = fontMetrics.bottom;//为基线到字体下边框的距离,即上图中的bottom
-        return (int) (width/16 - top/2 - bottom/2);//基线中间点的y轴计算公式
-    }
-
     public void setViews(List<ViewBean> views){
         this.views=views;
         invalidate();
